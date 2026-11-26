@@ -1,6 +1,10 @@
-[![](https://badgen.net/npm/dt/ngx-print)](https://www.npmjs.com/package/ngx-print) [![](https://travis-ci.org/selemxmn/ngx-print.svg?branch=master)](https://travis-ci.org/selemxmn/ngx-print) [![Coverage Status](https://coveralls.io/repos/github/selemxmn/ngx-print/badge.svg?branch=unit-tests)](https://coveralls.io/github/selemxmn/ngx-print?branch=unit-tests)
+# @solidexpert/ngx-print
 
-**[Live demo](https://ngx-print.github.io/ngx-print/)**
+Maintained by [solidexpert-ltd](https://github.com/solidexpert-ltd).
+
+This is the solidexpert line of [ngx-print](https://github.com/ngx-print/ngx-print). License and copyright stay with the original authors (see [LICENSE](LICENSE)).
+
+**[Upstream live demo](https://ngx-print.github.io/ngx-print/)**
 
 # ngx-print : *plug n' play Angular directive to print your stuff*
 This directive makes printing your HTML sections smooth and easy in your Angular application. It is inspired from the old [AngularJS ngPrint](https://github.com/gilf/ngPrint) directive.
@@ -30,13 +34,13 @@ clarity and compatibility tracking. Version 20 is intended for Angular 20 and so
 **1-** In your root application folder run:
 
 ```bash
-$ npm install ngx-print
+$ npm install @solidexpert/ngx-print
 ```
 
 **2-** Once `ngx-print` is installed, you need to import the directive `NgxPrintDirective`:
 
 ```ts
-import { NgxPrintDirective } from 'ngx-print';
+import { NgxPrintDirective } from '@solidexpert/ngx-print';
 
 @Component({
   ...
@@ -211,7 +215,7 @@ Inject the `NgxPrintService` into your component or service:
 
 ```ts
 import { inject } from '@angular/core';
-import { NgxPrintService, PrintOptions } from 'ngx-print';
+import { NgxPrintService, PrintOptions } from '@solidexpert/ngx-print';
 
 private readonly printService = inject(NgxPrintService);
 ```
@@ -219,7 +223,7 @@ private readonly printService = inject(NgxPrintService);
 ### Printing a Section
 
 ```ts
-import { PrintOptions } from 'ngx-print';
+import { PrintOptions } from '@solidexpert/ngx-print';
 
 printMe(): void {
   const customPrintOptions = new PrintOptions({

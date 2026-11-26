@@ -16,10 +16,10 @@
       "node_modules/@types"
     ],
     "paths": {
-      "ngx-print": [
+      "@solidexpert/ngx-print": [
         "./dist/ngx-print"
       ],
-      "ngx-print/*": [
+      "@solidexpert/ngx-print/*": [
         "./dist/ngx-print/*"
       ]
     }

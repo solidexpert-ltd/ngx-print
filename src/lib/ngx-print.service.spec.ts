@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NgxPrintService } from './ngx-print.service';
-import { Component, CSP_NONCE, inject, provideZonelessChangeDetection } from '@angular/core';
+import { Component, CSP_NONCE, inject, provideZoneChangeDetection } from '@angular/core';
 import { PrintOptions } from './print-options';
 import { PrintStyle } from './ngx-print.base';
 
@@ -62,7 +62,7 @@ describe('NgxPrintService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [TestNgxPrintServiceComponent],
-      providers: [{ provide: CSP_NONCE, useValue: testNonce }, NgxPrintService, provideZonelessChangeDetection()],
+      providers: [{ provide: CSP_NONCE, useValue: testNonce }, NgxPrintService, provideZoneChangeDetection()],
     });
     service = TestBed.inject(NgxPrintService);
     // Create a fixture object (that is going to allows us to create an instance of that component)

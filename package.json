@@ -1,17 +1,20 @@
 {
-  "name": "ngx-print",
+  "name": "@solidexpert/ngx-print",
   "version": "22.2.1",
-  "description": "Plug n' Play Angular directive to print your stuff",
+  "description": "Plug n' Play Angular directive to print your stuff. Maintained by solidexpert-ltd. Upstream: https://github.com/ngx-print/ngx-print",
   "author": "https://github.com/ngx-print/ngx-print/graphs/contributors",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ngx-print/ngx-print.git"
+    "url": "git+https://github.com/solidexpert-ltd/ngx-print.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ngx-print/ngx-print/issues"
+    "url": "https://github.com/solidexpert-ltd/ngx-print/issues"
   },
-  "homepage": "https://ngx-print.github.io/ngx-print/",
+  "homepage": "https://github.com/solidexpert-ltd/ngx-print#readme",
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26"
+  },
   "keywords": [
     "print",
     "angular",
@@ -31,15 +34,15 @@
     "lint": "ng lint"
   },
   "devDependencies": {
-    "@angular/build": "^22.2.1",
-    "@angular/cli": "^22.2.1",
-    "@angular/common": "^22.2.1",
-    "@angular/compiler": "^22.2.1",
-    "@angular/compiler-cli": "^22.2.1",
-    "@angular/core": "^22.2.1",
-    "@angular/forms": "^22.2.1",
-    "@angular/platform-browser": "^22.2.1",
-    "@angular/router": "^22.2.1",
+    "@angular/build": "22.3.0",
+    "@angular/cli": "22.3.0",
+    "@angular/common": "22.3.0",
+    "@angular/compiler": "22.3.0",
+    "@angular/compiler-cli": "22.3.0",
+    "@angular/core": "22.3.0",
+    "@angular/forms": "22.3.0",
+    "@angular/platform-browser": "22.3.0",
+    "@angular/router": "22.3.0",
     "@eslint/js": "^10.0.1",
     "@types/node": "^24.19.0",
     "@vitest/coverage-v8": "^5.0.3",
@@ -48,13 +51,16 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",
     "jsdom": "^30.1.1",
-    "ng-packagr": "^22.2.4",
+    "ng-packagr": "22.3.0",
     "prettier": "^3.9.9",
+    "rxjs": "^7.8.2",
     "typescript": "~6.0.3",
+    "zone.js": "~0.16.3",
     "typescript-eslint": "8.72.2",
     "vitest": "^5.0.3"
   },
   "peerDependencies": {
-    "rxjs": "^7.4.0"
+    "@angular/core": "^22.0.0",
+    "rxjs": "^7.8.2"
   }
 }

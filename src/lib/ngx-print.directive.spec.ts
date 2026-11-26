@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { Component, DebugElement, provideZonelessChangeDetection, signal } from '@angular/core';
+import { Component, DebugElement, provideZoneChangeDetection, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { NgxPrintDirective } from './ngx-print.directive';
@@ -68,7 +68,7 @@ describe('NgxPrintDirective', () => {
   beforeEach(() => {
     // Configure a NgModule-like decorator metadata
     TestBed.configureTestingModule({
-      providers: [provideZonelessChangeDetection()],
+      providers: [provideZoneChangeDetection()],
       imports: [TestNgxPrintComponent],
     });
 
@@ -110,6 +110,7 @@ describe('NgxPrintDirective', () => {
   it('should returns a string from array of objects', async () => {
     vi.spyOn(window, 'open');
     component.printStyle.set(styleSheet);
+    fixture.detectChanges();
     await fixture.whenStable();
 
     const directive = buttonEl.injector.get(NgxPrintDirective);
@@ -125,6 +126,7 @@ describe('NgxPrintDirective', () => {
       'li::before': { content: '"→"' },
       'p': { 'font-family': '"Helvetica Neue", Arial, sans-serif', color: 'red' },
     });
+    fixture.detectChanges();
     await fixture.whenStable();
 
     const directive = buttonEl.injector.get(NgxPrintDirective);
@@ -138,6 +140,7 @@ describe('NgxPrintDirective', () => {
   it('should accept a raw CSS string for printStyle', async () => {
     vi.spyOn(window, 'open');
     component.printStyle.set('h1, h2 { color: red; }');
+    fixture.detectChanges();
     await fixture.whenStable();
 
     const directive = buttonEl.injector.get(NgxPrintDirective);

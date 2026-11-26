@@ -20,7 +20,10 @@
           }
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "polyfills": ["zone.js"]
+          }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
@@ -53,6 +56,7 @@
                 "input": "projects/demo/public"
               }
             ],
+            "polyfills": ["zone.js"],
             "styles": [
               "projects/demo/src/styles.scss"
             ]
@@ -94,7 +98,10 @@
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "polyfills": ["zone.js"]
+          }
         }
       }
     }
